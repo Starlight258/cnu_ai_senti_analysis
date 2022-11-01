@@ -21,8 +21,8 @@ for num in range(1,3):
     doc = BeautifulSoup(result.text, 'html.parser')
     title_list = doc.select('ul.list_news2 a.link_txt')
     # 마지막 페이지 +1의 페이지 URL 가보기! -한번 해보자
-    if title_list: # 수집 안되면:
-        break # 페이지 반복을 멈춰라
+    # if title_list: # 수집 안되면:
+    #     break # 페이지 반복을 멈춰라
 
     for i, title in enumerate(title_list):
         print(f'인덱스: {i+1}, url: {title["href"]}')
